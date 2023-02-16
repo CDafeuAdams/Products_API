@@ -4,6 +4,5 @@ from django.db import models
 class Product(models.Model):
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
-    price = models.DecimalField()
+    price = models.DecimalField(max_digits=40,decimal_places=6)
     inventory_quantity = models.IntegerField()
-    
